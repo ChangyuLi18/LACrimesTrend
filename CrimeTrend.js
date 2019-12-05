@@ -20,7 +20,7 @@
     var crimesByYear = {}
     var crimes  = d3.csv(data, function(d){
       return {
-        date_occurred: d['Date Occurred'],
+        //date_occurred: d['Date Occurred'],
         date_reported: d['Date Reported'],
         one: d['One']
       };
@@ -172,8 +172,8 @@ function plotData(thisData,limits,x,y) {
         d3.select("#line" + i).attr("stroke-dasharray", totalLength + " " + totalLength)
           .attr("stroke-dashoffset", totalLength)
           .transition()
-          .duration(500)
-          .delay(320*i)
+          .duration(1200)
+          .delay(700*i)
           .ease(d3.easeLinear)
           .attr("stroke-dashoffset", 0)
           .style("stroke-width", 3)
