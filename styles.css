@@ -4,7 +4,26 @@ path {
     stroke-width: 2;
     fill: none;
 }
-
+b {
+    font: 30px Arial;
+}
+.year {
+font:15px Arial;
+left:-350px;
+bottom: -750px;
+position: relative
+}
+.num {
+transform: rotate(45deg);
+transform-origin: 20% 40%;
+font:15px Arial;
+stroke: black;
+left:-500px;
+bottom: -400px;
+display: block;
+margin:auto;
+position:relative;
+}
 .axis path,
 .axis line {
     fill: none;
