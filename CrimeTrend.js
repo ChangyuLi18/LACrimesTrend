@@ -68,7 +68,7 @@
   //make scatter plot with trend line
   function makeLinePlot(crimesByYear) {
     dataset = makeArrayObj(crimesByYear)
-
+    makeLabels();
     // get arrays of fertility rate data and life Expectancy data
     let year = dataset.map((row) => parseFloat(row["year"]));
     //let year = d3.keys(crimesByYear)
@@ -88,7 +88,7 @@
     plotData(dataset,axesLimits,"year","number");
     //console.log(dataset)
     // draw title and axes labels
-    makeLabels();
+    
   }
 
 
@@ -102,12 +102,12 @@
 
     svgContainer.append('text')
       .attr('x', 400)
-      .attr('y', 650)
+      .attr('y', 700)
       .style('font-size', '10pt')
       .text('Year');
 
     svgContainer.append('text')
-      .attr('transform', 'translate(15, 300)rotate(-90)')
+      .attr('transform', 'translate(9, 400)rotate(-90)')
       .style('font-size', '10pt')
       .text('Number of Crimes');
   }
